@@ -1,5 +1,5 @@
 "use client";
-
+import { toast } from "sonner";
 import { ChangeEvent, useState } from "react";
 
 import { parseCsv } from "@/lib/parseCsv";
@@ -22,12 +22,12 @@ export default function CsvUploader({
     if (!file) return;
 
     if (!file.name.endsWith(".csv")) {
-      alert("Please upload a CSV file.");
+      toast.error("Please upload a CSV file");
       return;
     }
 
     setFileName(file.name);
-
+    toast.success("CSV uploaded successfully");
     parseCsv(file, onDataParsed);
   };
 

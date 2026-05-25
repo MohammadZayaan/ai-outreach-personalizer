@@ -3,4 +3,6 @@ export interface Lead {
   role: string;
   company: string;
   linkedin_bio: string;
+
+  generatedMessage?: string;
 }
