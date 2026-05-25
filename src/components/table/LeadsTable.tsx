@@ -16,6 +16,9 @@ export default function LeadsTable({
             <th className="px-4 py-3">Role</th>
             <th className="px-4 py-3">Company</th>
             <th className="px-4 py-3">LinkedIn Bio</th>
+            <th className="px-4 py-3">
+              Generated Message
+            </th>
           </tr>
         </thead>
 
@@ -30,6 +33,9 @@ export default function LeadsTable({
               <td className="px-4 py-3">{lead.company}</td>
               <td className="px-4 py-3 text-zinc-600">
                 {lead.linkedin_bio}
+              </td>
+              <td className="px-4 py-3 text-zinc-600">
+                {lead.generatedMessage || "-"}
               </td>
             </tr>
           ))}
