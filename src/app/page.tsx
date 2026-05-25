@@ -94,10 +94,17 @@ export default function Home() {
         </h1>
 
         <p className="mt-4 max-w-2xl text-center text-lg text-zinc-600">
-          Upload a CSV file and generate
-          personalized cold outreach
+          Upload a CSV file and generate personalized cold outreach
           messages using AI.
         </p>
+
+        <a
+          href="/sample-leads.csv"
+          download
+          className="mt-6 rounded-lg border border-zinc-300 px-5 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100"
+        >
+          Download Sample CSV
+        </a>
 
         <div className="mt-10 w-full max-w-3xl rounded-2xl border border-zinc-200 bg-white p-8 shadow-sm">
           <CsvUploader
@@ -120,15 +127,15 @@ export default function Home() {
         {leads.some(
           (lead) => lead.generatedMessage
         ) && (
-          <button
-            onClick={() =>
-              exportLeadsToCsv(leads)
-            }
-            className="mt-4 rounded-lg border border-zinc-300 px-6 py-3 font-medium text-zinc-700 transition hover:bg-zinc-100"
-          >
-            Export CSV
-          </button>
-        )}
+            <button
+              onClick={() =>
+                exportLeadsToCsv(leads)
+              }
+              className="mt-4 rounded-lg border border-zinc-300 px-6 py-3 font-medium text-zinc-700 transition hover:bg-zinc-100"
+            >
+              Export CSV
+            </button>
+          )}
 
         <div className="mt-6 text-zinc-500">
           {leads.length === 0
