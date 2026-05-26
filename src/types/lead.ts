@@ -5,4 +5,4 @@ export interface Lead {
   linkedin_bio: string;
 
   generatedMessage?: string;
-}
+} 

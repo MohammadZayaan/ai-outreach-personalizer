@@ -6,7 +6,7 @@ Users can upload CSV lead data, generate personalized outreach messages, and exp
 
 ## Live Demo
 
-https://ai-outreach-personalizer-hhpx.vercel.app/
+https://ai-outreach-personalizer.vercel.app/
 
 ---
 
